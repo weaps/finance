@@ -11,6 +11,9 @@ import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'home',
+  mounted() {
+    window.console.log(location)
+  },
   components: {
     HelloWorld
   }
