@@ -5,6 +5,7 @@ const resolve = dir => {
 module.exports = {
   publicPath: '/',
   outputDir: 'dist',
+  productionSourceMap: false,
   chainWebpack: config => {
     config.resolve.alias
       .set('@', resolve('src'))
