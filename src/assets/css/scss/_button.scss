@@ -4,7 +4,7 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  border: 1px solid transparent;
+  border: rem(1) solid transparent;
   background: #ffffff;
   //@include button-size($padding-base-vertical, $padding-base-horizontal)
   @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $border-radius-base);

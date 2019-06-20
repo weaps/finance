@@ -9,7 +9,9 @@
 </script>
 
 <style lang="scss" scoped>
+@import "../../assets/css/rem";
 .header {
-  display: flex;
+  width: 100%;
+  height: rem(100);
 }
 </style>

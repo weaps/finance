@@ -5,6 +5,11 @@ const resolve = dir => {
 module.exports = {
   publicPath: '/',
   outputDir: 'dist',
+  pages: {
+    index: {
+      entry: ['./src/utility/viewport.js', './src/main.js']
+    }
+  },
   productionSourceMap: false,
   chainWebpack: config => {
     config.resolve.alias
