@@ -1,13 +1,18 @@
 <template>
   <section class="swiper-container">
-    <swiper :class="cname" :options="options">
-      <swiper-slide>s</swiper-slide>
+    <swiper :class="cname" :options="swiperOptions" :not-next-tick="swiperOptions.notNextTick">
+      <swiper-slide v-for="(item, index) of list" :key="index">
+        <router-link :to="{name: item.url}">
+          <img :src="item.src" alt="">
+        </router-link>
+      </swiper-slide>
+      <div class="swiper-pagination" v-if="swiperOptions.pagination"></div>
     </swiper>
   </section>
 </template>
 
 <script>
-  import {swiper, swiperSlide} from 'vue-awesome-swiper'
+  import { swiper, swiperSlide } from 'vue-awesome-swiper'
   import '~swiper/dist/css/swiper.css'
   export default {
     name: "slider",
@@ -18,7 +23,7 @@
           return ''
         }
       },
-      options: {
+      swiperOptions: {
         type: Object,
         default() {
           return {
@@ -29,6 +34,12 @@
             },
             notNextTick: false
           }
+        }
+      },
+      list: {
+        type: Object,
+        default() {
+          return []
         }
       }
     },

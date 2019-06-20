@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <publice-header></publice-header>
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
@@ -7,6 +8,7 @@
 
 <script>
 // @ is an alias to /src
+import PubliceHeader from '@/common/header/header'
 import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
@@ -15,7 +17,8 @@ export default {
     window.console.log(location)
   },
   components: {
-    HelloWorld
+    HelloWorld,
+    PubliceHeader
   }
 }
 </script>
