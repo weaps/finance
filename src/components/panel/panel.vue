@@ -1,6 +1,6 @@
 <template>
   <div class="panel">
-    <header class="panel-header" :class="panelHeaderStyle" v-text="title"></header>
+    <header class="panel-header border-b" :class="panelHeaderStyle" v-text="title"></header>
     <slot class="panel-body"></slot>
   </div>
 </template>
@@ -25,6 +25,17 @@
   }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+/*@import "../../assets/css/scss/_border.scss";*/
+.panel {
+  width: 100%;
+  background: #ffffff;
+  .header {
+    height: rem(40);
+    line-height: rem(40);
+  }
+  .panel-body {
+    padding: 20px;
+  }
+}
 </style>

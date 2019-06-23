@@ -1,0 +1,40 @@
+@mixin border($direction) {}
+.border-b {
+  position: relative;
+  &:before {
+    border-bottom: 1px solid $btn-default-border;
+    content: '';
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    -webkit-transform-origin: left bottom;
+    @media screen and (-webkit-min-device-pixel-ratio: 2) {
+      -webkit-transform:scaleY(.5);
+    }
+    @media screen and (-webkit-min-device-pixel-ratio: 3) {
+      -webkit-transform:scaleY(.3333);
+    }
+  }
+}
+
+.border-t {
+  position: relative;
+  &:after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    content: '';
+    width: 100%;
+    border-top: 1px solid $btn-default-border;
+    transform-origin: left top;
+    @media screen and (-webkit-min-device-pixel-ratio: 2) {
+      -webkit-transform:scaleY(.5);
+    }
+    @media screen and (-webkit-min-device-pixel-ratio: 3) {
+      -webkit-transform:scaleY(.3333);
+    }
+  }
+}

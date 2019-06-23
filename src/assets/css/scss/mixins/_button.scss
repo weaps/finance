@@ -1,9 +1,9 @@
 
 @mixin button-size() {
-  padding: rem(20) rem(40);
-  font-size: rem(32);
+  padding: rem(16) rem(30);
+  font-size: rem(24);
   line-height: 1;
-  border-radius: rem(8);
+  border-radius: rem(6);
 }
 
 @mixin button-variant($color, $background, $border) {

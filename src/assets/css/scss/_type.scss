@@ -1,3 +1,4 @@
+$marginPadding: 5 10 20 30;
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: $headings-font-family;
@@ -17,4 +18,54 @@ h1, h2, h3, h4, h5, h6,
 }
 .pull-left {
   float: left !important;
+}
+@each $px in $marginPadding {
+  @each $trbl in t r b l {
+
+    @if $trbl == t {
+      .m#{$trbl}#{$px} {
+        margin-top: #{$px}px;
+      }
+    }
+    @if $trbl == r {
+      .m#{$trbl}#{$px} {
+        margin-right: #{$px}px;
+      }
+    }
+    @if $trbl == b {
+      .m#{$trbl}#{$px} {
+        margin-bottom: #{$px}px;
+      }
+    }
+    @if $trbl == l {
+      .m#{$trbl}#{$px} {
+        margin-left: #{$px}px;
+      }
+    }
+  }
+}
+//padding
+@each $px in $marginPadding {
+  @each $trbl in t r b l {
+    @if $trbl == t {
+      .p#{$trbl}#{$px} {
+        padding-top: #{$px}px;
+      }
+    }
+    @if $trbl == r {
+      .p#{$trbl}#{$px} {
+        padding-right: #{$px}px;
+      }
+    }
+    @if $trbl == b {
+      .p#{$trbl}#{$px} {
+        padding-bottom: #{$px}px;
+      }
+    }
+    @if $trbl == l {
+      .p#{$trbl}#{$px} {
+        padding-left: #{$px}px;
+      }
+    }
+  }
 }

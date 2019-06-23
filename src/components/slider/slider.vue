@@ -56,24 +56,4 @@
 </script>
 
 <style lang="scss">
-.swiper-container {
-  .item {
-    img {
-      width: 100%;
-    }
-  }
-  .swiper-pagination {
-    .swiper-pagination-bullet {
-      opacity: 1;
-      width: 10px;
-      height: 10px;
-      background: rgba(255,255,255, .4);
-    }
-    .swiper-pagination-bullet-active {
-      width: 20px;
-      background: rgba(255,255,255, .8);
-      border-radius: 4px;
-    }
-  }
-}
 </style>
