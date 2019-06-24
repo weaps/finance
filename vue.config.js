@@ -2,6 +2,7 @@ const path = require('path')
 const resolve = dir => {
   return path.join(__dirname, dir)
 }
+console.log(process.env.VUE_APP_TEST)
 module.exports = {
   publicPath: '/',
   outputDir: 'dist',
