@@ -36,27 +36,4 @@
 
 <style lang="scss" scoped>
 @import "../../assets/css/rem";
-.panel {
-  width: 100%;
-  background: #ffffff;
-  .panel-header {
-    position: relative;
-    height: rem(100);
-    line-height: rem(100);
-    text-align: center;
-    font-size: rem(36);
-    .right {
-      position: absolute;
-      top: 50%;
-      right: rem(10);
-      transform: translateY(-50%);
-      color: #999999;
-      font-size: rem(24);
-      text-decoration: none;
-    }
-  }
-  .panel-body {
-    padding: 20px;
-  }
-}
 </style>
